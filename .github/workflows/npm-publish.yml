@@ -32,7 +32,6 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: env
       - name: Configure npm
         run: |
           echo '//registry.npmjs.org/:_authToken=${secrets.NODE_AUTH_TOKEN}' > .npmrc
