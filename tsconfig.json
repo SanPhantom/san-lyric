@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "dist/types",
+    "module": "esnext",
+    "target": "esnext",
+    "lib": ["esnext", "dom"],
+    "sourceMap": true,
+    "jsx": "react-jsx",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "strict": true,
+    "paths": {
+      "@/*": ["./packages/*"]
+    }
+  },
+  "include": [
+    "typings",
+    "packages/**/*",
+    "typings/**/*",
+    "config/**/*",
+    ".eslintrc.js",
+    ".prettierrc.js",
+    "packages/typings.d.ts"
+  ],
+  "exclude": ["node_modules", "build", "dist", "**/*.less"]
+}
