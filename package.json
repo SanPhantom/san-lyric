@@ -21,6 +21,10 @@
     "san",
     "san-lyric"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SanPhantom/san-lyric.git"
+  },
   "peerDependencies": {
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
