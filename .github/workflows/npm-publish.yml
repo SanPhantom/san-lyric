@@ -9,9 +9,9 @@ name: Node.js Package
 on:
   push:
     branches:
-    - master
-    - release/*
-    
+      - master
+      - release/*
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -32,7 +32,8 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
+      - run: env
       - run: npm ci
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: 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
+          NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
