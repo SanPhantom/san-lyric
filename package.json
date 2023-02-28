@@ -1,7 +1,7 @@
 {
   "name": "san-lyric",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "react music lyric component",
   "type": "module",
   "main": "dist/packages/main.js",
   "types": "dist/types/main.d.ts",
@@ -10,7 +10,8 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "link": "npm link"
   },
   "author": "SanPhantom",
   "license": "ISC",
