@@ -16,6 +16,7 @@ import less from 'less';
 // 环境变量
 
 const entry = 'packages/main.ts'
+const urilsEntry = 'packages/utils.ts'
 const componentsDir = 'packages/components'
 const componentsName = fs.readdirSync(path.resolve(componentsDir))
 const componentsEntry = componentsName.map(
@@ -91,7 +92,7 @@ const externalConfig = [
 ];
 
 export default defineConfig([{
-  input: [entry, ...componentsEntry],
+  input: [entry, urilsEntry, ...componentsEntry],
   output: { ...esmOutput, dir: 'dist', format: 'es' },
   external: externalConfig,
   plugins: [
