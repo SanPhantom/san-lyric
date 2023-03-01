@@ -21,7 +21,6 @@ jobs:
         with:
           node-version: 16
       - run: npm ci
-#       - run: npm test
 
   publish-npm:
     needs: build
@@ -32,8 +31,12 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: env
+      - name: Configure npm
+        run: |
+          echo '//registry.npmjs.org/:_authToken=${secrets.NODE_AUTH_TOKEN}' > .npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm ci
       - run: npm publish
         env:
-          NPM_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
+          NPM_TOKEN: ${secrets.NODE_AUTH_TOKEN}
