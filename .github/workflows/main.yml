@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     branches:
-      - marset
+      - master
 
 defaults:
   run:
