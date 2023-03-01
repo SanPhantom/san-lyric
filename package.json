@@ -1,6 +1,6 @@
 {
   "name": "san-lyric",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "react music lyric component",
   "type": "module",
   "main": "dist/packages/main.js",
