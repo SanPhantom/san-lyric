@@ -11,7 +11,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
-    "link": "npm link"
+    "link": "npm link",
+    "changeset": "changeset"
   },
   "author": "SanPhantom",
   "license": "ISC",
