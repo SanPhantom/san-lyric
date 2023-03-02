@@ -13,7 +13,7 @@
     "build": "rollup -c",
     "link": "npm link",
     "changeset": "changeset",
-    "version": "changeset version"
+    "version": "changeset version && npm install"
   },
   "author": "SanPhantom",
   "license": "ISC",
