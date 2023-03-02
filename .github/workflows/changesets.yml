@@ -9,32 +9,32 @@ defaults:
   run:
     shell: bash
 
-jobs: 
+jobs:
   changelog:
     name: Changelog PR or Release
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          
+
       - name: Install Dependencies
         run: npm install
-      
+
       - name: Build Packages
         run: npm run build
-      
+
       - name: Create Release Pull Request Or Publish
         id: changesets
         uses: changesets/action@v1
-        with: 
+        with:
           version: npm run version
           publish: npm exec changeset publish
-          commit: '[ci] release'
-          title: '[ci] release'
+          commit: "[ci] release"
+          title: "[ci] release"
         env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
