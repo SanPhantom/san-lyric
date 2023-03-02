@@ -17,7 +17,6 @@ const sports = {
 interface ILyricProps {
   fps?: number;
   lyrics: LyricItemType[];
-  player: HTMLAudioElement;
   currentTime: number;
   duration: number;
 }

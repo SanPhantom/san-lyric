@@ -20,7 +20,11 @@
     "rollup",
     "lyric",
     "san",
-    "san-lyric"
+    "san-lyric",
+    "react",
+    "react-lyric",
+    "music",
+    "music lyric"
   ],
   "repository": {
     "type": "git",
