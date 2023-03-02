@@ -12,7 +12,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
     "link": "npm link",
-    "changeset": "changeset"
+    "changeset": "changeset",
+    "version": "changeset version"
   },
   "author": "SanPhantom",
   "license": "ISC",
