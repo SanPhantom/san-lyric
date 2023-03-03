@@ -1,5 +1,11 @@
 # san-lyric
 
+## 0.0.14
+
+### Patch Changes
+
+- a59c07b: 添加格式化歌词
+
 ## 0.0.13
 
 ### Patch Changes
