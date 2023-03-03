@@ -32,7 +32,11 @@ getScreenFps?.().then((fps: number) => {
 | `duration`    | 歌曲总时长 `ms毫秒级`       | `number`          | 0       | `true`   |
 | `fps`         | 屏幕刷新率                  | `number`          | 0       | `true`   |
 
-## 3. Type(类型)
+## 3. Hooks
+
+### `useLyricData` (格式化歌词)
+
+## 4. Type(类型)
 
 ### `LyricItemType`
 
