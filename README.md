@@ -25,16 +25,26 @@ getScreenFps?.().then((fps: number) => {
 
 #### Props
 
-| Name          | Desc                        | Type              | Default | Required |
-| ------------- | --------------------------- | ----------------- | ------- | -------- |
-| `lyrics`      | 歌词数据 a                  | `LyricItemType[]` | []      | `true`   |
-| `currentTime` | 歌曲播放当前进度 `ms毫秒级` | `number`          | 0       | `true`   |
-| `duration`    | 歌曲总时长 `ms毫秒级`       | `number`          | 0       | `true`   |
-| `fps`         | 屏幕刷新率                  | `number`          | 0       | `true`   |
+| Name            | Desc                        | Type              | Default | Required |
+| --------------- | --------------------------- | ----------------- | ------- | -------- |
+| `lyrics`        | 歌词数据 a                  | `LyricItemType[]` | []      | `true`   |
+| `currentTime`   | 歌曲播放当前进度 `ms毫秒级` | `number`          | 0       | `true`   |
+| `duration`      | 歌曲总时长 `ms毫秒级`       | `number`          | 0       | `true`   |
+| `fps`           | 屏幕刷新率                  | `number`          | 0       | `true`   |
+| `color`         | 文本颜色                    | `Color`           |         | `false`  |
+| `selectColor`   | 播放时文本颜色              | `Color`           |         | `false`  |
+| `selectBgColor` | 播放时文本背景颜色          | `Color`           |         | `false`  |
 
 ## 3. Hooks
 
 ### `useLyricData` (格式化歌词)
+
+> 需要传递原文歌词和译文歌词
+
+| Name      | Desc     | Type     | Default | Required |
+| --------- | -------- | -------- | ------- | -------- |
+| `lyric`   | 原文歌词 | `string` |         | `true`   |
+| `t_lyric` | 译文歌词 | `string` |         | `true`   |
 
 ## 4. Type(类型)
 

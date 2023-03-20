@@ -19,9 +19,20 @@ interface ILyricProps {
   lyrics: LyricItemType[];
   currentTime: number;
   duration: number;
+  selectColor?: string;
+  color?: string;
+  selectBgColor?: string;
 }
 
-const Lyric = ({ fps, lyrics, currentTime, duration }: ILyricProps) => {
+const Lyric = ({
+  fps,
+  lyrics,
+  currentTime,
+  duration,
+  selectBgColor = "transparent",
+  color,
+  selectColor,
+}: ILyricProps) => {
   const [current, setCurrent] = useState<number>(0);
   const lyricRootRef = useRef<HTMLDivElement | null>(null);
 
@@ -183,6 +194,10 @@ const Lyric = ({ fps, lyrics, currentTime, duration }: ILyricProps) => {
       {lyrics.map((item, index) => (
         <div
           className={`lyric ${current === index && "active"}`}
+          style={{
+            color: current === index ? selectColor : color,
+            backgroundColor: current === index ? selectBgColor : undefined,
+          }}
           key={item.time}
         >
           <p className="lyric-item">{item.lyric}</p>
