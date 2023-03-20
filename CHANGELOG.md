@@ -1,5 +1,11 @@
 # san-lyric
 
+## 0.1.0
+
+### Minor Changes
+
+- 27d5093: 添加自定义文本颜色的渲染
+
 ## 0.0.14
 
 ### Patch Changes
