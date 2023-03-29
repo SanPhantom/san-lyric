@@ -55,3 +55,34 @@ getScreenFps?.().then((fps: number) => {
 | `lyric`   | 原文歌词           | `string` |         | `true`   |
 | `t_lyric` | 译文歌词           | `string` |         | `true`   |
 | `time`    | 展示当前歌词的时间 | `number` | 0       | `true`   |
+
+## Example ( React )
+
+```javascript
+const BaseLyric = memo(({ id, currentTime, duration }: IBaseLyricProps) => {
+  // const { data, runAsync } = useRequest(getLyricData, {
+  //   manual: true,
+  // });
+
+  const lyricData = useLyricData(
+    data?.lrc.lyric ?? "",
+    data?.romalrc.lyric ?? ""
+  );
+  useAsyncEffect(async () => {
+    if (id !== "") {
+      await runAsync(id);
+    }
+  }, [id]);
+
+  return (
+    <div className="lyric-container">
+      <Lyric
+        lyrics={lyricData ?? []}
+        currentTime={currentTime}
+        duration={duration}
+        fps={60}
+      />
+    </div>
+  );
+});
+```

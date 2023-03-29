@@ -54,7 +54,9 @@ export const getScreenFps = (() => {
  */
 export const formatLyric = (lyric: string, tLyric: string): LyricItemType[] => {
   const lyricData = getLyricData(deleteLast(lyric.split(/\n/)));
-  const tLyricData = getLyricData(deleteLast(tLyric.split(/\n/)));
+  const tLyricData = getLyricData(deleteLast(tLyric.split(/\n/)), "t_lyric");
+
+  console.log({ lyricData, tLyricData });
 
   return values(defaultsDeep(lyricData, tLyricData));
 };
