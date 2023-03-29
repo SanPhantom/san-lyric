@@ -1,5 +1,11 @@
 # san-lyric
 
+## 0.1.1
+
+### Patch Changes
+
+- 0377d20: 修复歌词显示问题
+
 ## 0.1.0
 
 ### Minor Changes
