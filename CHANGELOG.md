@@ -1,5 +1,18 @@
 # san-lyric
 
+## 0.2.0
+
+### Minor Changes
+
+- cb7de53: 修复歌词显示错误
+
+### Patch Changes
+
+- a84b12a: s`
+- e028b30: xiufuwenti
+- 7be979e: xiufu
+- 11868de: 修复歌词显示错误
+
 ## 0.1.1
 
 ### Patch Changes
